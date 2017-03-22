@@ -29,4 +29,5 @@ dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), di
 });
 ```
 
-the instance method is the same as class method
+the instance method is the same as class method, go [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) page for more SVProgressHUD usage
+
