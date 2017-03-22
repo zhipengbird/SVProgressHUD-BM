@@ -40,7 +40,9 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 @property (nonatomic, strong) NSTimer *fadeOutTimer;
 
 @property (nonatomic, strong) UIControl *controlView;
+
 @property (nonatomic, strong) UIView *backgroundView;
+
 @property (nonatomic, strong) SVRadialGradientLayer *backgroundRadialGradientLayer;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
 @property (nonatomic, strong) UIVisualEffectView *hudView;
@@ -1162,7 +1164,6 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
     return [self sharedView].hudView.alpha > 0.0f;
 #endif
 }
-
 
 #pragma mark - Getters
 
