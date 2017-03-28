@@ -1,18 +1,18 @@
 # SVProgressHUD
 
 ## Addition Support
-the default hud is only for global, there is on one shareView, sometime we want some hud for specific view only mask the specific view, here i have add SVProgressHUD+Instance for instance support, the methond is the same as the default class method
+the default hud is only for global, there is only one shareView, sometime we want some hud for specific view only mask the specific view, here i have add SVProgressHUD+Instance for instance support, the methond is the same as the default class method
 
 
 ## Install
 ### Cocoapods
 ```bash
-pod 'SVProgressHUD+BM', '~> 0.0.1'
+pod 'SVProgressHUD-BM', '~> 0.0.2'
 ```
 
 ### Carthage
 ```
-github "zhengbomo/SVProgressHUD" == 0.0.1
+github "zhengbomo/SVProgressHUD-BM" == 0.0.2
 ```
 
 ### Usage

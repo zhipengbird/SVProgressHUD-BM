@@ -6,7 +6,7 @@
 //  Copyright © 2017年 EmbeddedSources. All rights reserved.
 //
 
-#import <SVProgressHUD/SVProgressHUD.h>
+#import "SVProgressHUD.h"
 
 @interface SVProgressHUD (Instance)
 

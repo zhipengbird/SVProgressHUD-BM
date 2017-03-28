@@ -17,7 +17,7 @@
 		4A9D7DF41AB345E80039B273 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A9D7DCE1AB345540039B273 /* SVIndefiniteAnimatedView.h */; };
 		4A9D7DF71AB34A620039B273 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65F0220D15C858060030BBEF /* SVProgressHUD.bundle */; };
 		65F0220015C857EF0030BBEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F021FF15C857EF0030BBEF /* Foundation.framework */; };
-		65F0220515C857EF0030BBEF /* SVProgressHUD.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65F0220415C857EF0030BBEF /* SVProgressHUD.h */; };
+		65F0220515C857EF0030BBEF /* SVProgressHUD.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 65F0220415C857EF0030BBEF /* SVProgressHUD.h */; };
 		65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F0220615C857EF0030BBEF /* SVProgressHUD.m */; };
 		6A58C8EC1CAE62F400BF604D /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A58C8EA1CAE62F400BF604D /* SVProgressAnimatedView.h */; };
 		6A58C8ED1CAE62F400BF604D /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A58C8EB1CAE62F400BF604D /* SVProgressAnimatedView.m */; };
@@ -35,6 +35,7 @@
 		F735D14A1E8169D0007230F2 /* SVProgressHUD+Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = F735D1181E815A06007230F2 /* SVProgressHUD+Instance.m */; };
 		F735D1571E821795007230F2 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D7DD81AB345980039B273 /* SVProgressHUD.framework */; };
 		F735D1581E821795007230F2 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9D7DD81AB345980039B273 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F735D15C1E822885007230F2 /* SVProgressHUD+Instance.m in Copy Files */ = {isa = PBXBuildFile; fileRef = F735D1181E815A06007230F2 /* SVProgressHUD+Instance.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,14 +56,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		65F021FA15C857EF0030BBEF /* CopyFiles */ = {
+		65F021FA15C857EF0030BBEF /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				65F0220515C857EF0030BBEF /* SVProgressHUD.h in CopyFiles */,
+				65F0220515C857EF0030BBEF /* SVProgressHUD.h in Copy Files */,
+				F735D15C1E822885007230F2 /* SVProgressHUD+Instance.m in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F735D15B1E821796007230F2 /* Embed Frameworks */ = {
@@ -111,7 +114,7 @@
 		F735D13D1E815F66007230F2 /* SVProgressHUDDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUDDemoTests.m; sourceTree = "<group>"; };
 		F735D13F1E815F66007230F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F735D14E1E820E20007230F2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F735D14F1E820E20007230F2 /* SVProgressHUD+BM.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SVProgressHUD+BM.podspec"; sourceTree = "<group>"; };
+		F735D14F1E820E20007230F2 /* SVProgressHUD-BM.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SVProgressHUD-BM.podspec"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F735D14E1E820E20007230F2 /* README.md */,
-				F735D14F1E820E20007230F2 /* SVProgressHUD+BM.podspec */,
+				F735D14F1E820E20007230F2 /* SVProgressHUD-BM.podspec */,
 				65F0220115C857EF0030BBEF /* SVProgressHUD */,
 				4A9D7DD91AB345990039B273 /* SVProgressHUD-Framework */,
 				F735D11F1E815F66007230F2 /* SVProgressHUDDemo */,
@@ -301,7 +304,7 @@
 			buildPhases = (
 				65F021F815C857EF0030BBEF /* Sources */,
 				65F021F915C857EF0030BBEF /* Frameworks */,
-				65F021FA15C857EF0030BBEF /* CopyFiles */,
+				65F021FA15C857EF0030BBEF /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -442,8 +445,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */,
-				3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
 				F735D1191E815A06007230F2 /* SVProgressHUD+Instance.m in Sources */,
+				3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
 				4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */,
 				6A58C8ED1CAE62F400BF604D /* SVProgressAnimatedView.m in Sources */,
 			);
