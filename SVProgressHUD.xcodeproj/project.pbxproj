@@ -367,8 +367,8 @@
 					};
 					F735D11D1E815F66007230F2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P5N4UR78CU;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 5F5U5TFB26;
+						ProvisioningStyle = Manual;
 					};
 					F735D1381E815F66007230F2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -702,7 +702,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = P5N4UR78CU;
+				DEVELOPMENT_TEAM = 5F5U5TFB26;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = SVProgressHUDDemo/Info.plist;
@@ -711,6 +711,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bomo.test.SVProgressHUDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4010dbe0-3896-413d-8614-33b8c80d944c";
+				PROVISIONING_PROFILE_SPECIFIER = ushareit_develop_any;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -728,7 +730,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = P5N4UR78CU;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -738,6 +740,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bomo.test.SVProgressHUDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -30,6 +30,10 @@
 
     // Do any additional setup after loading the view, typically from a nib.
 }
+- (IBAction)hub:(id)sender {
+    
+    [SVProgressHUD show];
+}
 
 
 - (void)didReceiveMemoryWarning {

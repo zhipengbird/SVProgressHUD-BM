@@ -8,7 +8,6 @@
 
 #import "FirstViewController.h"
 #import <SVProgressHUD/SVProgressHUD+Instance.h>
-
 @interface FirstViewController ()
 
 @end
@@ -30,6 +29,16 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)hub:(id)sender {
+    
+    NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
+    NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
+    NSBundle *imageBundle = [NSBundle bundleWithURL:url];
+    
+    NSString *path = [imageBundle pathForResource:@"greet" ofType:@"gif"];
+//    [SVProgressHUD showImage: [ UIImage sd_animatedGIFilePath:path]status:@"正在加载"];
+    [SVProgressHUD showWithStatus:@"helloofdsafdsafasdf"];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
