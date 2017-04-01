@@ -7,12 +7,12 @@ the default hud is only for global, there is only one shareView, sometime we wan
 ## Install
 ### Cocoapods
 ```bash
-pod 'SVProgressHUD-BM', '~> 0.0.2'
+pod 'SVProgressHUD-BM', '~> 0.0.3'
 ```
 
 ### Carthage
 ```
-github "zhengbomo/SVProgressHUD-BM" == 0.0.2
+github "zhengbomo/SVProgressHUD-BM" == 0.0.3
 ```
 
 ### Usage
