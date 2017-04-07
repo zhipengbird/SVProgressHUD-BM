@@ -65,8 +65,8 @@
     [self.lefBubble.layer addAnimation:scaleAnimationLeft forKey:@"leftView.scale"];
     
     CABasicAnimation *scaleAnimationRight = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    scaleAnimationRight.fromValue = [NSNumber numberWithFloat:MAX_SIZE*0.2/MIN_SIZE];
-    scaleAnimationRight.toValue = [NSNumber numberWithFloat:MAX_SIZE/MIN_SIZE];
+    scaleAnimationRight.fromValue = [NSNumber numberWithFloat:.2];
+    scaleAnimationRight.toValue = [NSNumber numberWithFloat:1];
     scaleAnimationRight.duration = ANIMATION_TIME;
     scaleAnimationRight.autoreverses = YES;
     scaleAnimationRight.repeatCount = FLT_MAX;
@@ -81,7 +81,7 @@
     
     [self.rightBubble setAutoLayoutCenterYToViewCenterY:self constant:0];
     [self.rightBubble setAutoLayoutSize:CGSizeMake(MAX_SIZE, MAX_SIZE)];
-    [self.rightBubble setAutoLayoutLeftToViewRight:self.lefBubble constant:10];
+    [self.rightBubble setAutoLayoutLeftToViewRight:self.lefBubble constant:5];
     
     self.lefBubble.layer.cornerRadius = MAX_SIZE/2.0;
     
