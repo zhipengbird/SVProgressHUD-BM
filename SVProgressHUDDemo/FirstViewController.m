@@ -37,7 +37,13 @@
     
     NSString *path = [imageBundle pathForResource:@"greet" ofType:@"gif"];
 //    [SVProgressHUD showImage: [ UIImage sd_animatedGIFilePath:path]status:@"正在加载"];
-    [SVProgressHUD showWithStatus:@"helloofdsafdsafasdf"];
+      SVProgressHUD *hud = [SVProgressHUD HUDWith:self.view];
+    [hud showWithStatus:@"helloofdsafdsafasdf"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [hud showSuccessWithStatus:@"success"];
+        [hud dismissWithDelay:1];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

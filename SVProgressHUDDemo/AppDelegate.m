@@ -18,7 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [SVProgressHUD setFont:[UIFont systemFontOfSize:15]];
-    
+//    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeCustom];
+    [[SVProgressHUD appearance]setDefaultAnimationType:SVProgressHUDAnimationTypeCustom];
     return YES;
 }
 

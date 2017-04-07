@@ -13,6 +13,7 @@
 #import "SVIndefiniteAnimatedView.h"
 #import "SVProgressAnimatedView.h"
 #import "SVRadialGradientLayer.h"
+#import "SVBubbleScaleAnimatedView.h"
 
 #ifndef kCFCoreFoundationVersionNumber_iOS_9_0
 #define kCFCoreFoundationVersionNumber_iOS_9_0 1240.1
@@ -1082,7 +1083,7 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         indefiniteAnimatedView.strokeColor = self.foregroundColorForStyle;
         indefiniteAnimatedView.strokeThickness = self.ringThickness;
         indefiniteAnimatedView.radius = self.statusLabel.text ? self.ringRadius : self.ringNoTextRadius;
-    } else {
+    } else if(self.defaultAnimationType ==SVProgressHUDAnimationTypeNative){
         // Check if spinner exists and is an object of different class
         if(_indefiniteAnimatedView && ![_indefiniteAnimatedView isKindOfClass:[UIActivityIndicatorView class]]){
             [_indefiniteAnimatedView removeFromSuperview];
@@ -1096,6 +1097,23 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
         // Update styling
         UIActivityIndicatorView *activityIndicatorView = (UIActivityIndicatorView*)_indefiniteAnimatedView;
         activityIndicatorView.color = self.foregroundColorForStyle;
+    }else{
+        //自定义动画
+        
+        // Check if spinner exists and is an object of different class
+        if(_indefiniteAnimatedView && ![_indefiniteAnimatedView isKindOfClass:[SVBubbleScaleAnimatedView class]]){
+            [_indefiniteAnimatedView removeFromSuperview];
+            _indefiniteAnimatedView = nil;
+        }
+        
+        if(!_indefiniteAnimatedView){
+            _indefiniteAnimatedView = [[SVBubbleScaleAnimatedView alloc]init];
+        }
+        
+        // Update styling
+//        SVIndefiniteAnimatedView *indefiniteAnimatedView = (SVIndefiniteAnimatedView*)_indefiniteAnimatedView;
+        
+        
     }
     [_indefiniteAnimatedView sizeToFit];
     

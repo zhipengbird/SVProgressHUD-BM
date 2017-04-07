@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AF00CDA1E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CD91E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m */; };
+		0AF00CDB1E97B6A3005B93DA /* SVBubbleScaleAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CD91E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m */; };
+		0AF00CDC1E97B6A5005B93DA /* SVBubbleScaleAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CD91E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m */; };
+		0AF00CDF1E97C56F005B93DA /* UIView+AutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AF00CDD1E97C56F005B93DA /* UIView+AutoLayout.h */; };
+		0AF00CE01E97C56F005B93DA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CDE1E97C56F005B93DA /* UIView+AutoLayout.m */; };
+		0AF00CE11E97C56F005B93DA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CDE1E97C56F005B93DA /* UIView+AutoLayout.m */; };
+		0AF00CE21E97C56F005B93DA /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF00CDE1E97C56F005B93DA /* UIView+AutoLayout.m */; };
 		3CB14F9C1AFBCB57003C2641 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */; };
 		3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
 		3CB14F9E1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
@@ -82,6 +89,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0AF00CD81E97B3E6005B93DA /* SVBubbleScaleAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVBubbleScaleAnimatedView.h; sourceTree = "<group>"; };
+		0AF00CD91E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVBubbleScaleAnimatedView.m; sourceTree = "<group>"; };
+		0AF00CDD1E97C56F005B93DA /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		0AF00CDE1E97C56F005B93DA /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		4A9D7DCE1AB345540039B273 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -203,6 +214,8 @@
 		65F0220115C857EF0030BBEF /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				0AF00CDD1E97C56F005B93DA /* UIView+AutoLayout.h */,
+				0AF00CDE1E97C56F005B93DA /* UIView+AutoLayout.m */,
 				3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */,
 				3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */,
 				65F0220415C857EF0030BBEF /* SVProgressHUD.h */,
@@ -211,6 +224,8 @@
 				6A58C8EB1CAE62F400BF604D /* SVProgressAnimatedView.m */,
 				4A9D7DCE1AB345540039B273 /* SVIndefiniteAnimatedView.h */,
 				4A9D7DCF1AB345540039B273 /* SVIndefiniteAnimatedView.m */,
+				0AF00CD81E97B3E6005B93DA /* SVBubbleScaleAnimatedView.h */,
+				0AF00CD91E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m */,
 				F735D1171E815A06007230F2 /* SVProgressHUD+Instance.h */,
 				F735D1181E815A06007230F2 /* SVProgressHUD+Instance.m */,
 				65F0220215C857EF0030BBEF /* Supporting Files */,
@@ -273,6 +288,7 @@
 				F735D1491E816937007230F2 /* SVProgressHUD+Instance.h in Headers */,
 				4A9D7DF41AB345E80039B273 /* SVIndefiniteAnimatedView.h in Headers */,
 				6A58C8EC1CAE62F400BF604D /* SVProgressAnimatedView.h in Headers */,
+				0AF00CDF1E97C56F005B93DA /* UIView+AutoLayout.h in Headers */,
 				3CB14F9C1AFBCB57003C2641 /* SVRadialGradientLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,9 +449,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9D7DF11AB345DD0039B273 /* SVProgressHUD.m in Sources */,
+				0AF00CDC1E97B6A5005B93DA /* SVBubbleScaleAnimatedView.m in Sources */,
 				F735D14A1E8169D0007230F2 /* SVProgressHUD+Instance.m in Sources */,
 				3CB14F9E1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
 				4A9D7DF21AB345DD0039B273 /* SVIndefiniteAnimatedView.m in Sources */,
+				0AF00CE01E97C56F005B93DA /* UIView+AutoLayout.m in Sources */,
 				6A58C8EE1CAE62F400BF604D /* SVProgressAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,9 +463,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */,
+				0AF00CDA1E97B3E6005B93DA /* SVBubbleScaleAnimatedView.m in Sources */,
 				F735D1191E815A06007230F2 /* SVProgressHUD+Instance.m in Sources */,
 				3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
 				4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */,
+				0AF00CE11E97C56F005B93DA /* UIView+AutoLayout.m in Sources */,
 				6A58C8ED1CAE62F400BF604D /* SVProgressAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +477,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F735D12B1E815F66007230F2 /* SecondViewController.m in Sources */,
+				0AF00CE21E97C56F005B93DA /* UIView+AutoLayout.m in Sources */,
 				F735D1251E815F66007230F2 /* AppDelegate.m in Sources */,
+				0AF00CDB1E97B6A3005B93DA /* SVBubbleScaleAnimatedView.m in Sources */,
 				F735D1281E815F66007230F2 /* FirstViewController.m in Sources */,
 				F735D1221E815F66007230F2 /* main.m in Sources */,
 			);

@@ -46,7 +46,8 @@
         _loadingAnimatedLayer.contentsGravity= kCAGravityResizeAspect;
         _loadingAnimatedLayer.frame = CGRectMake(0.0f, 0.0f, arcCenter.x*2, arcCenter.y*2);
         _loadingAnimatedLayer.fillColor = [UIColor clearColor].CGColor;
- 
+        _loadingAnimatedLayer.path = smoothedPath.CGPath;
+
     
         NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
         NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
