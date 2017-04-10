@@ -75,6 +75,10 @@
 
 -(void)layoutAnimatedView{
    
+    
+    [self addSubview:self.lefBubble];
+    [self addSubview:self.rightBubble];
+    
     [self.lefBubble setAutoLayoutCenterYToViewCenterY:self constant:0];
     [self.lefBubble setAutoLayoutSize:CGSizeMake(MAX_SIZE, MAX_SIZE)];
     [self.lefBubble setAutoLayoutCenterXToViewCenterX:self constant:-MAX_SIZE/2*1.5];
@@ -82,6 +86,8 @@
     [self.rightBubble setAutoLayoutCenterYToViewCenterY:self constant:0];
     [self.rightBubble setAutoLayoutSize:CGSizeMake(MAX_SIZE, MAX_SIZE)];
     [self.rightBubble setAutoLayoutLeftToViewRight:self.lefBubble constant:5];
+    
+    
     
     self.lefBubble.layer.cornerRadius = MAX_SIZE/2.0;
     
@@ -101,7 +107,6 @@
     if (!_lefBubble) {
         _lefBubble =[[UIView alloc]initWithFrame:CGRectZero];
         _lefBubble.layer.anchorPoint=CGPointMake(0.5, 0.5);
-        [self addSubview:_lefBubble];
         _lefBubble.backgroundColor= self.color;
     }
     return _lefBubble;
@@ -110,7 +115,6 @@
 -(UIView *)rightBubble{
     if (!_rightBubble) {
         _rightBubble =[[UIView alloc]initWithFrame:CGRectZero];
-        [self addSubview:_rightBubble];
         _rightBubble.layer.anchorPoint=CGPointMake(0.5, 0.5);
 
         _rightBubble.backgroundColor = self.color;
