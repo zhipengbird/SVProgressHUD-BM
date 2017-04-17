@@ -11,7 +11,7 @@
 @interface SVIndefiniteAnimatedView ()
 
 @property (nonatomic, strong) CAShapeLayer *indefiniteAnimatedLayer;
-@property (nonatomic, strong) CAShapeLayer *loadingAnimatedLayer;
+//@property (nonatomic, strong) CAShapeLayer *loadingAnimatedLayer;
 @end
 
 @implementation SVIndefiniteAnimatedView
@@ -20,13 +20,13 @@
     if (newSuperview) {
         [self layoutAnimatedLayer];
     } else {
-        [_loadingAnimatedLayer removeFromSuperlayer];
-        _loadingAnimatedLayer = nil;
+        [_indefiniteAnimatedLayer removeFromSuperlayer];
+        _indefiniteAnimatedLayer = nil;
     }
 }
 
 - (void)layoutAnimatedLayer {
-    CALayer *layer = self.loadingAnimatedLayer;
+    CALayer *layer = self.indefiniteAnimatedLayer;
     [self.layer addSublayer:layer];
     
     CGFloat widthDiff = CGRectGetWidth(self.bounds) - CGRectGetWidth(layer.bounds);
@@ -36,46 +36,46 @@
 
 
 
-- (CAShapeLayer*)loadingAnimatedLayer {
-    if(!_loadingAnimatedLayer) {
-        CGPoint arcCenter = CGPointMake(self.radius+self.strokeThickness/2+5, self.radius+self.strokeThickness/2+5);
-        UIBezierPath* smoothedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter radius:self.radius startAngle:(CGFloat) (M_PI*3/2) endAngle:(CGFloat) (M_PI/2+M_PI*5) clockwise:YES];
-        
-        _loadingAnimatedLayer = [CAShapeLayer layer];
-        _loadingAnimatedLayer.contentsScale = [[UIScreen mainScreen] scale];
-        _loadingAnimatedLayer.contentsGravity= kCAGravityResizeAspect;
-        _loadingAnimatedLayer.frame = CGRectMake(0.0f, 0.0f, arcCenter.x*2, arcCenter.y*2);
-        _loadingAnimatedLayer.fillColor = [UIColor clearColor].CGColor;
-        _loadingAnimatedLayer.path = smoothedPath.CGPath;
-
-    
-        NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
-        NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
-        NSBundle *imageBundle = [NSBundle bundleWithURL:url];
-        
-        NSString *path = [imageBundle pathForResource:@"Loading" ofType:@"png"];
-        
-        _loadingAnimatedLayer.contents = (__bridge id)[[UIImage imageWithContentsOfFile:path] CGImage];
-
-        
-        NSTimeInterval animationDuration = 1.2;
-        CAMediaTimingFunction *linearCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        
-        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-        animation.fromValue = (id) 0;
-        animation.toValue = @(M_PI*2);
-        animation.duration = animationDuration;
-        animation.timingFunction = linearCurve;
-        animation.removedOnCompletion = NO;
-        animation.repeatCount = INFINITY;
-        animation.fillMode = kCAFillModeForwards;
-        animation.autoreverses = NO;
-        [_loadingAnimatedLayer addAnimation:animation forKey:@"rotate"];
-        
-        
-    }
-    return _loadingAnimatedLayer;
-}
+//- (CAShapeLayer*)loadingAnimatedLayer {
+//    if(!_loadingAnimatedLayer) {
+//        CGPoint arcCenter = CGPointMake(self.radius+self.strokeThickness/2+5, self.radius+self.strokeThickness/2+5);
+//        UIBezierPath* smoothedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter radius:self.radius startAngle:(CGFloat) (M_PI*3/2) endAngle:(CGFloat) (M_PI/2+M_PI*5) clockwise:YES];
+//        
+//        _loadingAnimatedLayer = [CAShapeLayer layer];
+//        _loadingAnimatedLayer.contentsScale = [[UIScreen mainScreen] scale];
+//        _loadingAnimatedLayer.contentsGravity= kCAGravityResizeAspect;
+//        _loadingAnimatedLayer.frame = CGRectMake(0.0f, 0.0f, arcCenter.x*2, arcCenter.y*2);
+//        _loadingAnimatedLayer.fillColor = [UIColor clearColor].CGColor;
+//        _loadingAnimatedLayer.path = smoothedPath.CGPath;
+//
+//    
+//        NSBundle *bundle = [NSBundle bundleForClass:[SVProgressHUD class]];
+//        NSURL *url = [bundle URLForResource:@"SVProgressHUD" withExtension:@"bundle"];
+//        NSBundle *imageBundle = [NSBundle bundleWithURL:url];
+//        
+//        NSString *path = [imageBundle pathForResource:@"Loading" ofType:@"png"];
+//        
+//        _loadingAnimatedLayer.contents = (__bridge id)[[UIImage imageWithContentsOfFile:path] CGImage];
+//
+//        
+//        NSTimeInterval animationDuration = 1.2;
+//        CAMediaTimingFunction *linearCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//        
+//        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//        animation.fromValue = (id) 0;
+//        animation.toValue = @(M_PI*2);
+//        animation.duration = animationDuration;
+//        animation.timingFunction = linearCurve;
+//        animation.removedOnCompletion = NO;
+//        animation.repeatCount = INFINITY;
+//        animation.fillMode = kCAFillModeForwards;
+//        animation.autoreverses = NO;
+//        [_loadingAnimatedLayer addAnimation:animation forKey:@"rotate"];
+//        
+//        
+//    }
+//    return _loadingAnimatedLayer;
+//}
 
 - (CAShapeLayer*)indefiniteAnimatedLayer {
     if(!_indefiniteAnimatedLayer) {
@@ -154,10 +154,10 @@
     if(radius != _radius) {
         _radius = radius;
         
-//        [_indefiniteAnimatedLayer removeFromSuperlayer];
-//        _indefiniteAnimatedLayer = nil;
-        [_loadingAnimatedLayer removeFromSuperlayer];
-        _loadingAnimatedLayer = nil;
+        [_indefiniteAnimatedLayer removeFromSuperlayer];
+        _indefiniteAnimatedLayer = nil;
+//        [_loadingAnimatedLayer removeFromSuperlayer];
+//        _loadingAnimatedLayer = nil;
         if(self.superview) {
             [self layoutAnimatedLayer];
         }
@@ -166,7 +166,7 @@
 
 - (void)setStrokeColor:(UIColor*)strokeColor {
     _strokeColor = strokeColor;
-//    _indefiniteAnimatedLayer.strokeColor = strokeColor.CGColor;
+    _indefiniteAnimatedLayer.strokeColor = strokeColor.CGColor;
 }
 
 - (void)setStrokeThickness:(CGFloat)strokeThickness {

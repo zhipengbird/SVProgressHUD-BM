@@ -17,6 +17,7 @@
     instance.containerView = view;
     instance.defaultStyle = SVProgressHUDStyleDark;
     instance.defaultMaskType = SVProgressHUDMaskTypeClear;
+    instance.defaultAnimationType =SVProgressHUDAnimationTypeCustom;
     return instance;
 }
 

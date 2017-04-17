@@ -61,6 +61,7 @@
     scaleAnimationLeft.toValue = [NSNumber numberWithFloat:0.2];
     scaleAnimationLeft.duration = ANIMATION_TIME;
     scaleAnimationLeft.autoreverses = YES;
+    scaleAnimationLeft.removedOnCompletion=NO;
     scaleAnimationLeft.repeatCount = FLT_MAX;
     [self.lefBubble.layer addAnimation:scaleAnimationLeft forKey:@"leftView.scale"];
     
@@ -69,6 +70,7 @@
     scaleAnimationRight.toValue = [NSNumber numberWithFloat:1];
     scaleAnimationRight.duration = ANIMATION_TIME;
     scaleAnimationRight.autoreverses = YES;
+    scaleAnimationRight.removedOnCompletion=NO;
     scaleAnimationRight.repeatCount = FLT_MAX;
     [self.rightBubble.layer addAnimation:scaleAnimationRight forKey:@"rightView.scale"];
 }
