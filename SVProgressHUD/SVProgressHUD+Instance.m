@@ -18,6 +18,20 @@
     instance.defaultStyle = SVProgressHUDStyleDark;
     instance.defaultMaskType = SVProgressHUDMaskTypeClear;
     instance.defaultAnimationType =SVProgressHUDAnimationTypeCustom;
+    [instance setDefaultAnimationType:SVProgressHUDAnimationTypeCustom];
+    [ instance setDefaultStyle:SVProgressHUDStyleCustom];
+    
+    // 设置HUB背景
+    instance.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.75 ];
+    // 设置字体颜色
+    instance.foregroundColor = [UIColor whiteColor];
+    // 设置圆角大小
+   [instance setCornerRadius:8];
+    
+    [instance setMinimumSize:CGSizeMake(120, 100)];
+    
+    // 设置字体样式
+    [instance setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
     return instance;
 }
 
